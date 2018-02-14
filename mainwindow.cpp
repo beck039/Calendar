@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "addeventbutton.h"
 #include "todolist.h"
+#include "mainwindowtabbed.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -29,4 +30,11 @@ void MainWindow::on_pushButton_2_clicked() // Todo List
    TodoList TodoList;
    TodoList.setModal(true);
    TodoList.exec();
+}
+
+void MainWindow::on_pushButton_7_clicked() // Switch to tabbed view button
+{
+    mainWindowTabbed mainWindowTabbed;
+    mainWindowTabbed.setModal(true);
+    mainWindowTabbed.exec();
 }
